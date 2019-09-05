@@ -1,0 +1,114 @@
+.neuBtn {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #82bef6;
+    padding: 9px 22px;
+    font-size: 13px;
+    margin-left:8px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: none; 
+    background: #1398ed;
+    color:#fff;
+}
+.modal-main{
+    width:550px;
+    left: calc(50% - 275px);
+    top: 20%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    position: fixed;
+    }
+    .modal-main.md{
+    width: 550px; left: calc(50% - 275px); 
+    } 
+    .modal-main.lg{       
+    width: 850px; left: calc(50% - 425px); 
+    } 
+    .modal-main.sm{
+    width: 350px; 
+    left: calc(50% - 175px); 
+    }
+    .modal-main{        
+    background: #fff; 
+    z-index: 999; 
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: 6px;
+    -webkit-box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+    outline: 0;
+    }
+    
+    .neuBtn {
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #82bef6;
+    padding: 9px 22px;
+    font-size: 13px;
+    margin-left:8px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: none;
+    }
+    .neuBtn.primary{
+    background: #1398ed;
+    color:#fff;
+    }
+    .neuBtn.secondary{
+    background: #ffffff;
+    color:#1398ed;
+    }
+    
+    .modal-main header{
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+    }
+    .modal-main header h2{
+    margin:0;
+    padding: 0;
+    display: inline;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    }
+    .cancleIcon {
+        position: relative; 
+        float: right;
+        width: 40px;
+        height: 42px;
+        z-index: 99;
+    }
+    .cancleIcon .close{ 
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0; 
+    position: absolute;
+    top: 0px;
+    right: 0;
+    border: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    }
+    
+    .modal-body{
+    position: relative;
+    padding: 20px;
+    min-height: 200px;
+    }
+    footer{
+    padding: 10px 15px;
+    text-align: right;
+    border-top: 1px solid #e5e5e5;
+    } 
+ 

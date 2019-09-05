@@ -1,0 +1,93 @@
+/* Simple dashboard grid CSS */
+*{ 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Assign grid instructions to our parent grid container */
+.grid-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+      "sidenav header"
+      "sidenav main"
+      "sidenav footer";
+    height: 100vh;
+  }
+  
+  /* Give every child element its grid name */
+  .header {
+    grid-area: header;
+    background-color: #648ca6;
+  }
+  
+  .sidenav {
+    grid-area: sidenav;
+    background-color: #0d0d0d;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 100vh;
+  } 
+  /* width */
+.sidenav::-webkit-scrollbar, .main::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.sidenav::-webkit-scrollbar-track, .main::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.sidenav::-webkit-scrollbar-thumb, .main::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.sidenav::-webkit-scrollbar-thumb:hover, .main::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+  .main {
+    grid-area: main;
+    background-color: #fff;
+  }
+ .logo{
+  background: #0d0d0d;
+  padding: 16px 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 22px;
+  position: fixed;
+  width:220px;
+ }
+
+ .logo strong{
+   margin-left:24px; 
+   font-weight: 500;
+ }
+
+  .header, .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    background-color: #ededed;
+  }
+  .footer{
+    margin-right: 20px; 
+    grid-area: footer;
+    background-color: #fff;
+    border-top:1px solid rgb(143, 143, 143);
+    justify-content: center;
+  }
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 0 40px 0;  
+    color: #333;
+    margin-left: 5px;
+  } 
+  .footer__copyright{
+text-align: center;
+  }

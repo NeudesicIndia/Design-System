@@ -1,0 +1,104 @@
+<div class="app-profile">
+
+  <header class="header">
+    <h1>Modals</h1>
+  </header>
+  <div><b>Neu Modal</b> component is a simple lightweight re-usable web component for
+    managing modals inside different framework web based projects.
+    It was built for modern browsers using JavaScript, HTML5 and SCSS.</div>
+  <br />
+
+  <div class="doc con demo">
+    <h2>Demo:</h2>
+    <p>Here is the demo link to showcase the modal component in different frameworks</p>
+    <ul class="demoBtnLinks"><li><a href="https://neu-html.netlify.com" target="_blank">Check in HTML</a></li>
+      <li><a href="https://neu-angular.netlify.com" target="_blank">Check in Angular</a></li>
+      <li><a href="https://neu-react.netlify.com" target="_blank">Check in React</a></li>
+      </ul>
+  </div>
+
+  <h2>How to use it:</h2>
+  <p>Check the below details to know how to use the modal box.</p>
+  <div class="doc con">
+    <h2>Setup</h2>
+    <p>To use neu-modal-component in your project install it via npm:</p>
+<code>
+<pre>
+npm i neu-modal
+</pre>
+</code>
+OR
+<code>
+<pre>
+https://unpkg.com/neu-modal@1.0.4/dist/modal-component/modal-component.esm.js
+</pre>
+</code>
+  </div>
+  <div id="codeSnip" class="doc con">
+    <header class="text-left">
+      <h2>Tag</h2>
+      <p>Our Neu modal component has its own custom tag element:</p>
+    </header>
+    <ul class="setupSteps text-left">
+      <li>
+        Following is the Tag structure:
+<code>
+<pre> 
+&lt;neu-modal size="md"&gt; <br/>
+&nbsp;&nbsp; &lt;div slot="header"&gt; ... &lt;/div&gt; <br/>
+&nbsp;&nbsp; &lt;div slot="body"&gt; ... &lt;/div&gt; <br/>
+&nbsp;&nbsp; &lt;span slot="footer"&gt; ... &lt;/div&gt; <br/>
+&lt;/neu-modal&gt;
+</pre>
+</code>
+      </li>
+    </ul>
+  </div>
+  <div class="doc con">
+    <header class="text-left">
+      <h2>Properties</h2>
+      <p>Property values can be specified using corresponding attributes defined on the Neu Modal web component
+        element.:</p>
+    </header>
+    <ul class="setupSteps text-left">
+      <li>
+        Following is the Tag structure:
+<code>
+<pre> 
+id = "anyIdName"  //ID is ref to handle events<br/>
+size = "md"  //To define the size of your modal (small-sm, medium-md, large-lg)<br/>
+showcancel = "true"     //To show or hide Cancel Button in footer - default true<br/>
+showcancelicon = "false"  //To show or hide Cancel Icon in header - default true<br/>
+footer = "true" //To show or hide modal footer - default true<br/>
+header = "true" //To show or hide modal header - default true<br/> 
+</pre>
+</code>
+      </li>
+    </ul>
+  </div>
+  <div id="codeSnip" class="doc con">
+    <header class="text-left">
+      <h2>Methods</h2>
+      <p>Neu Modal has two methods to handle the events:</p>
+    </header>
+    <ul class="setupSteps text-left">
+      <li>
+        Following are the methods to interact with Neu Modal:
+<code>
+<pre> 
+openModal()<br/> 
+onModalClose()
+</pre>
+</code>
+      </li>
+      <li>
+        To open a Modal - trigger openModal() method using any event
+<code>
+<pre>
+document.querySelector('refName').openModal(); //Native JS  
+</pre>
+</code>
+      </li>
+    </ul>
+  </div>
+</div>
