@@ -9,30 +9,57 @@
   <script type="module" src="/build/alert-component.esm.js"></script>
   <script nomodule src="/build/alert-component.js"></script>
   <style>
-    h4{
+    h4 {
       font-weight: 600;
       line-height: 28px;
       font-size: 24px;
       margin: 8px 0;
     }
   </style>
+  <script>
+    function showAlert1() {
+      var alert1 = document.querySelector('#alert1');
+      alert1.addEventListener("alertDismissed", event => { alert("alert 1 dismissed!" )})
+      alert1.showAlert();
+    }
+    function showAlert2() {
+      var alert2 = document.querySelector('#alert2');
+      alert2.addEventListener("alertDismissed", event => { alert("alert 2 dismissed!" )})
+      alert2.showAlert();
+    }
+    function showAlert3() {
+      var alert3 = document.querySelector('#alert3');
+      alert3.addEventListener("alertDismissed", event => { alert("alert 3 dismissed!" )})
+      alert3.showAlert();
+    }
+  </script>
 </head>
 
 <body>
+  <div>
+    <button onClick="showAlert1()"> Show Alert 1 </button>
+    <button onClick="showAlert2()"> Show Alert 2 </button>
+    <button onClick="showAlert3()"> Show Alert 3 </button>
+  </div>
+  <br>
+  <!--dismissible alert-->
+  <neu-alert id="alert1" alert-type="warning" alert-dismissible="true">
+    <div slot="content">
+      <strong>Neque porro quisquam</strong> est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+    </div>
+  </neu-alert>
 
-  <neu-alert alert-type="warning" alert-dismissible="true">
+  <br>
+  <!--static alert-->
+  <neu-alert id="alert2" alert-type="success" alert-dismissible="false" auto-dismiss-timer="10000">
     <div slot="content">
-      <strong>Neque porro quisquam</strong> est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+      <strong>Yes!</strong> This alert will dismiss after 10 seconds
     </div>
   </neu-alert>
   <br>
-  <neu-alert alert-type="success" alert-dismissible="false">
-    <div slot="content">
-      <strong>Neque porro quisquam</strong> est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
-    </div>
-  </neu-alert>
-  <br>
-  <neu-alert alert-type="primary" alert-dismissible="false">
+
+  <!--variation 1-->
+  <neu-alert id="alert3" alert-type="primary" alert-dismissible="true">
     <h4 slot="header">Congrats!</h4>
     <div slot="content">
       <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so
@@ -40,10 +67,6 @@
       <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
     </div>
   </neu-alert>
-  <script>
-    const alertComponent = document.querySelector('neu-alert');
-    alertComponent.addEventListener('alertDismissed', event => { alert("The alert is dismissed!") })
-  </script>
 </body>
 
 </html>

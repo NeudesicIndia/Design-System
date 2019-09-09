@@ -12,7 +12,9 @@ export namespace Components {
   interface NeuAlert {
     'alertDismissible': boolean;
     'alertType': string;
+    'autoDismissTimer': number;
     'dismissAlert': () => Promise<void>;
+    'showAlert': () => Promise<void>;
   }
 }
 
@@ -33,6 +35,7 @@ declare namespace LocalJSX {
   interface NeuAlert extends JSXBase.HTMLAttributes<HTMLNeuAlertElement> {
     'alertDismissible'?: boolean;
     'alertType'?: string;
+    'autoDismissTimer'?: number;
     'onAlertDismissed'?: (event: CustomEvent<any>) => void;
   }
 

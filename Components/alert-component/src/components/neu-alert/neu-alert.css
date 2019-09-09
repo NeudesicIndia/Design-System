@@ -4,13 +4,16 @@
     margin-bottom: 1rem;
     border: 1px solid #0000;
     border-radius: .25rem;
-    opacity: 1;
+    opacity: 0;
+    z-index: -1;
 }
 .neu-alert.hide {
     opacity: 0;
+    z-index: -1;
 }
 .neu-alert.show {
     opacity: 1;
+    z-index: 0;
 }
 .neu-alert.fade {
     transition: opacity .3s linear;

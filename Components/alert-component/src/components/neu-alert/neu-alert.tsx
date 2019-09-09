@@ -1,4 +1,4 @@
-import { Component, Prop, h, State, Method, Element, Event, EventEmitter } from '@stencil/core';
+import { Component, Prop, h, State, Method, Event, EventEmitter } from '@stencil/core';
 
 @Component({
     tag: 'neu-alert',
@@ -7,27 +7,53 @@ import { Component, Prop, h, State, Method, Element, Event, EventEmitter } from 
 })
 export class NeuAlert {
 
-    @Element() private element: HTMLElement;
     @Prop() alertType: string = "primary";
     @Prop() alertDismissible: boolean = false;
+    @Prop() autoDismissTimer: number = null;
 
-    @State() isDismissed: boolean = false;
+    @State() isDismissed: boolean = null;
 
     @Event() alertDismissed: EventEmitter;
 
     @Method()
-    async dismissAlert() {
-        this.isDismissed = true;
+    async showAlert(): Promise<void> {
         setTimeout(() => {
-            this.alertDismissed.emit();
-            this.element.remove();
+            this.isDismissed = false;
         }, 300);
     }
 
-    render() {
+    @Method()
+    async dismissAlert(): Promise<void> {
+        this.isDismissed = true;
+        setTimeout(() => {
+            this.alertDismissed.emit();
+        }, 300);
+    }
 
+    getAlertState(): string {
+        if (this.isDismissed === true) {
+            return "hide";
+        } else if (this.isDismissed === false) {
+            return "show";
+        } else {
+            return "";
+        }
+    }
+
+    componentDidLoad() {
+        if (this.autoDismissTimer && !this.alertDismissible) {
+            setTimeout(() => {
+                this.isDismissed = true;
+                setTimeout(() => {
+                    this.alertDismissed.emit();
+                }, 300);
+            }, this.autoDismissTimer);
+        }
+    }
+
+    render() {
         return (
-            <div class={`neu-alert fade ${this.alertType} ${this.isDismissed ? 'hide' : 'show'}`}>
+            <div class={`neu-alert fade ${this.alertType} ${this.getAlertState()}`}>
                 <slot name="header"></slot>
                 <slot name="content"></slot>
                 {this.alertDismissible
