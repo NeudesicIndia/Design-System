@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/button-component.esm.js"></script>
+  <script nomodule src="/build/button-component.js"></script>
+
+</head>
+
+<body>
+  <div>
+    <h3>Small Button</h3>
+    <neu-button type="button" button-style="primary" size="sm">Primary</neu-button>
+    <neu-button type="button" button-style="secondary" size="sm">Secondary</neu-button>
+    <neu-button type="button" button-style="light" size="sm" disabled="true">Light</neu-button>
+  </div>
+  <div>
+    <h3>Medium Button</h3>
+    <neu-button type="button" button-style="success" size="md">Success</neu-button>
+    <neu-button type="button" button-style="danger" size="md">Danger</neu-button>
+    <neu-button type="button" button-style="dark" size="md" disabled="true">Dark</neu-button>
+  </div>
+  <div>
+    <h3>Large Button</h3>
+    <neu-button type="button" button-style="warning" size="lg">Warning</neu-button>
+    <neu-button type="button" button-style="info" size="lg">Info</neu-button>
+  </div>
+  <div>
+    <h3>Link Button</h3>
+    <neu-button type="button" button-style="link" size="sm">Link</neu-button>
+    <neu-button type="button" button-style="link" size="sm" disabled="true">Link</neu-button>
+  </div>
+
+</body>
+
+</html>
