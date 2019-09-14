@@ -11,7 +11,7 @@
     background-color: #0000;
     border: 1px solid #0000;
     padding: 6px 12px;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     border-radius: 3px;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
@@ -24,15 +24,15 @@
     }
     &.neu-button-sm{
         padding: 4px 8px;
-        font-size: 14px;
+        font-size: 12px;
     }
     &.neu-button-lg{
         padding: 8px 16px;
-        font-size: 20px;
+        font-size: 18px;
     }
     &.neu-button-md{
         padding: 6px 12px;
-        font-size: 16px;
+        font-size: 14px;
     }
     &.neu-button-primary {
         color: #fff;
